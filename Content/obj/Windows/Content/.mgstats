@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharSheet.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/CharSheet.xnb","TextureProcessor","Texture2DContent",1066,60085,0.1238091
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharSheet1.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/CharSheet1.xnb","TextureProcessor","Texture2DContent",8706,64085,0.1255953
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/testTxr.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/testTxr.xnb","TextureProcessor","Texture2DContent",194,10085,0.1260151
