@@ -4,11 +4,19 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharSheet.png</File>
-    <File>C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharSheet1.png</File>
-    <File>C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/testTxr.png</File>
+    <File>C:/Users/LewisTom/Downloads/AgeOfWar04032022/AgeOfWar/AgeOfWar/Content/CharLev1.png</File>
+    <File>C:/Users/LewisTom/Downloads/AgeOfWar04032022/AgeOfWar/AgeOfWar/Content/CharSheet.png</File>
+    <File>C:/Users/LewisTom/Downloads/AgeOfWar04032022/AgeOfWar/AgeOfWar/Content/CharSheet1.png</File>
+    <File>C:/Users/LewisTom/Downloads/AgeOfWar04032022/AgeOfWar/AgeOfWar/Content/Heart.png</File>
+    <File>C:/Users/LewisTom/Downloads/AgeOfWar04032022/AgeOfWar/AgeOfWar/Content/Lev1Walk.png</File>
+    <File>C:/Users/LewisTom/Downloads/AgeOfWar04032022/AgeOfWar/AgeOfWar/Content/logPlat.png</File>
+    <File>C:/Users/LewisTom/Downloads/AgeOfWar04032022/AgeOfWar/AgeOfWar/Content/testTxr.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -11,17 +11,18 @@ namespace AgeOfWar
     {
         Texture2D platArt;
         public Rectangle platRect;
+        public bool touch;
 
-        public Platform(Texture2D art,int x,int y)
+        public Platform(Texture2D art,int x,int y,int width)
         {
             platArt = art;
-            platRect = new Rectangle(x, y, 100, 20);
+            platRect = new Rectangle(x, y, width, 10);
         }
 
 
         public void draw(SpriteBatch sb)
         {
-            sb.Draw(platArt, platRect, Color.Red);
+            sb.Draw(platArt, platRect, Color.White);
         }
     
     }

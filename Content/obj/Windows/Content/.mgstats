@@ -1,4 +1,8 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharSheet.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/CharSheet.xnb","TextureProcessor","Texture2DContent",1066,60085,0.1238091
-"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharSheet1.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/CharSheet1.xnb","TextureProcessor","Texture2DContent",8706,64085,0.1255953
-"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/testTxr.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/testTxr.xnb","TextureProcessor","Texture2DContent",194,10085,0.1260151
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharLev1.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/CharLev1.xnb","TextureProcessor","Texture2DContent",9184,166485,0.1433154
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharSheet.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/CharSheet.xnb","TextureProcessor","Texture2DContent",1066,60085,0.0025343
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharSheet1.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/CharSheet1.xnb","TextureProcessor","Texture2DContent",8706,64085,0.00283
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/Heart.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/Heart.xnb","TextureProcessor","Texture2DContent",297,4181,0.0011888
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/Lev1Walk.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/Lev1Walk.xnb","TextureProcessor","Texture2DContent",4482,83285,0.0045388
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/logPlat.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/logPlat.xnb","TextureProcessor","Texture2DContent",470,6085,0.0013887
+"C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/testTxr.png","C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/testTxr.xnb","TextureProcessor","Texture2DContent",194,10085,0.0013205
