@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/CharSheet1.png</SourceFile>
-  <SourceTime>2022-03-07T10:32:50.0162982+00:00</SourceTime>
-  <DestFile>C:/Users/LewisTom/source/repos/AgeOfWar/AgeOfWar/Content/bin/Windows/Content/CharSheet1.xnb</DestFile>
-  <DestTime>2022-03-08T11:34:23.7749024+00:00</DestTime>
+  <SourceFile>C:/Users/ec1704157/source/repos/AgeOfWar-main/Content/CharSheet1.png</SourceFile>
+  <SourceTime>2022-03-10T12:30:45.4725347+00:00</SourceTime>
+  <DestFile>C:/Users/ec1704157/source/repos/AgeOfWar-main/Content/bin/Windows/Content/CharSheet1.xnb</DestFile>
+  <DestTime>2022-03-10T12:31:13.0465886+00:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T17:17:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

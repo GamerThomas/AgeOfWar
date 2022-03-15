@@ -12,8 +12,8 @@ namespace AgeOfWar
         Texture2D spriteSheet, testArt;
         float vel, frameTime, frameRate, maxFallSpeed, walkSpeed;
         public Rectangle playerRect, feetRect, HeadRect, attackRect,leftRect,rightRect;
-        Rectangle cellPos, attackCellPos;
-        public bool falling, jumping;
+        Rectangle cellPos, attackCellPos,jumpCellPos, idleCellPos;
+        public bool falling, jumping,hit,playerHit;
         bool flipped, attackDone;
         KeyboardState oldKeyB;
 
@@ -36,7 +36,6 @@ namespace AgeOfWar
         public Player(Texture2D art, int x, int y, Texture2D test)
         {
             spriteSheet = art;
-
             testArt = test;
 
             playerRect = new Rectangle(x, y, 65, 80);
@@ -52,7 +51,11 @@ namespace AgeOfWar
 
             attackCellPos = new Rectangle(0, 81, 65, 80);
 
-            vel = 0.3f;
+            jumpCellPos = new Rectangle(0, 161, 80, 80);
+
+            idleCellPos = new Rectangle(0, 241, 65, 80);
+
+           vel = 0.3f;
 
             frameTime = 4;
             frameRate = 24;
@@ -76,7 +79,7 @@ namespace AgeOfWar
 
         public void playerUpdate(KeyboardState keyB, float deltaTime)
         {
-            if (keyB.IsKeyDown(Keys.D) && attackDone)
+            if (keyB.IsKeyDown(Keys.D) && attackDone && !hit)
             {
                 playerPos.X += walkSpeed;
                 m_currentState = AnimState.walkingRight;
@@ -84,7 +87,7 @@ namespace AgeOfWar
             }
 
 
-            if (keyB.IsKeyDown(Keys.A) && attackDone)
+            if (keyB.IsKeyDown(Keys.A) && attackDone && !hit)
             {
                 playerPos.X -= walkSpeed;
                 m_currentState = AnimState.walkingLeft;
@@ -108,13 +111,34 @@ namespace AgeOfWar
             {
                 m_currentState = AnimState.attack;
                 attackDone = false;
+                playerHit = true;
                 attack();
             }
 
 
-            if (playerVel.X >= maxFallSpeed)
+            if (playerVel.Y >= maxFallSpeed)
             {
                 playerVel.Y = maxFallSpeed;
+            }
+
+            if(playerVel.X >0)
+            {
+                playerVel.X -=0.5f;
+            }
+
+            if (playerVel.X < 0)
+            {
+                playerVel.X += 0.5f;
+            }
+
+            if (playerVel.X == 0)
+            {
+                hit = false;
+            }
+
+            if(! falling && !keyB.IsKeyDown(Keys.A) && !keyB.IsKeyDown(Keys.D) &&!keyB.IsKeyDown(Keys.F) && attackDone)
+            {
+                m_currentState = AnimState.idle;
             }
 
             updatePos();
@@ -146,6 +170,7 @@ namespace AgeOfWar
                     if (attackCellPos.X >= spriteSheet.Width - 65)
                     {
                         attackDone = true;
+                        playerHit = false;
                         attackCellPos.X = 0;
                         m_currentState = AnimState.walkingRight;
                     }
@@ -153,36 +178,21 @@ namespace AgeOfWar
                 }
             }
 
-
-            if (m_currentState == AnimState.walkingLeft)
+            if(m_currentState == AnimState.idle)
             {
-                sb.Draw(spriteSheet, playerRect, cellPos, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 0);
+                if (frameTime < 0)
+                {
+                    idleCellPos.X += 65;
+                    if (idleCellPos.X >= 130)
+                    {
+                        idleCellPos.X = 0;
+                        m_currentState = AnimState.idle;
+                    }
+                    frameTime = 4;
+                }
             }
 
-
-
-            if (m_currentState == AnimState.walkingRight)
-            {
-                sb.Draw(spriteSheet, playerRect, cellPos, Color.White);
-            }
-
-            if (m_currentState == AnimState.attack && !flipped)
-            {
-                sb.Draw(spriteSheet, playerRect, attackCellPos, Color.White);
-            }
-
-            if (m_currentState == AnimState.attack && flipped)
-            {
-                sb.Draw(spriteSheet, playerRect, attackCellPos, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 0);
-                
-            }
-
-
-            sb.Draw(testArt, attackRect, Color.Red);
-            sb.Draw(testArt, feetRect, Color.Yellow);
-            sb.Draw(testArt, HeadRect, Color.Blue);
-            sb.Draw(testArt, leftRect, Color.Orange);
-            sb.Draw(testArt, rightRect, Color.Green);
+            drawAnim(sb);
         }
 
 
@@ -208,10 +218,10 @@ namespace AgeOfWar
             playerPos.Y = playerPos.Y + playerVel.Y;
 
 
-            feetRect.X = playerRect.X + 10;
+            feetRect.X = playerRect.X + 13;
             feetRect.Y = playerRect.Bottom - 10;
 
-            HeadRect.X = playerRect.X + 10;
+            HeadRect.X = playerRect.X + 13;
             HeadRect.Y = playerRect.Top + 10;
 
             leftRect.X = playerRect.X;
@@ -221,6 +231,61 @@ namespace AgeOfWar
             rightRect.Y = playerRect.Y +20;
         }
 
+
+        void drawAnim(SpriteBatch sb)
+        {
+
+            if (m_currentState == AnimState.walkingLeft)
+            {
+                sb.Draw(spriteSheet, playerRect, cellPos, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 0);
+            }
+
+
+            if (m_currentState == AnimState.walkingRight)
+            {
+                sb.Draw(spriteSheet, playerRect, cellPos, Color.White);
+            }
+
+            if (m_currentState == AnimState.attack && !flipped)
+            {
+                sb.Draw(spriteSheet, playerRect, attackCellPos, Color.White);
+            }
+
+            if (m_currentState == AnimState.attack && flipped)
+            {
+                sb.Draw(spriteSheet, playerRect, attackCellPos, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 0);
+
+            }
+
+            if (m_currentState == AnimState.Jumping || m_currentState == AnimState.Falling && !flipped)
+            {
+                sb.Draw(spriteSheet, playerRect, jumpCellPos, Color.White);
+            }
+
+            if (m_currentState == AnimState.Jumping || m_currentState == AnimState.Falling && flipped)
+            {
+                sb.Draw(spriteSheet, playerRect, jumpCellPos, Color.White,0,Vector2.Zero, SpriteEffects.FlipHorizontally, 0);
+            }
+
+            if (m_currentState == AnimState.idle && !flipped)
+            {
+                sb.Draw(spriteSheet, playerRect, idleCellPos, Color.White);
+            }
+
+            if (m_currentState == AnimState.idle && flipped)
+            {
+                sb.Draw(spriteSheet, playerRect, idleCellPos, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 0);
+            }
+
+
+
+
+            sb.Draw(testArt, attackRect, Color.Red);
+            sb.Draw(testArt, feetRect, Color.Yellow);
+            sb.Draw(testArt, HeadRect, Color.Blue);
+            sb.Draw(testArt, leftRect, Color.Orange);
+            sb.Draw(testArt, rightRect, Color.Green);
+        }
     }
 
 

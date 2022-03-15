@@ -15,9 +15,11 @@ namespace AgeOfWar
 
         Player player;
 
+        List<BadGuyType1> badGuys;
         List<Wall> walls;
         List<Health> health;
         List<Platform> platforms;
+        List<Document> documents;
         KeyboardState keyB1;
         public Game1()
         {
@@ -30,6 +32,8 @@ namespace AgeOfWar
 
         protected override void Initialize()
         {
+            documents = new List<Document>();
+            badGuys = new List<BadGuyType1>();
             walls = new List<Wall>();
             health = new List<Health>();
             platforms = new List<Platform>();
@@ -44,11 +48,15 @@ namespace AgeOfWar
 
             cam = new Cam();
 
+            badGuys.Add(new BadGuyType1(Content.Load<Texture2D>("CharSheet"),100, 950, Content.Load<Texture2D>("testTxr")));
+
             playerHP();
 
             platformsLev1();
 
             wallsLev1();
+
+            docLev1();
 
         }
 
@@ -60,11 +68,26 @@ namespace AgeOfWar
 
             player.playerUpdate(keyB1, (float)gameTime.ElapsedGameTime.TotalSeconds);
 
+            for(int i =0; i < badGuys.Count;i++)
+            {
+                badGuys[i].update();
+            }
+
+            for (int i = 0; i < documents.Count; i++)
+            {
+                documents[i].Update(player.playerRect);
+            }
+
+
+            hitPlayer();
+
             HpUpdate();
 
             playerCollision();
 
             touch();
+
+            docCollision();
 
             cam.follow(player);
 
@@ -94,6 +117,16 @@ namespace AgeOfWar
             for (int i = 0; i < platforms.Count; i++)
             {
                 platforms[i].draw(_spriteBatch);
+            }
+
+            for (int i = 0; i < badGuys.Count; i++)
+            {
+                badGuys[i].Draw(_spriteBatch, (float)gameTime.ElapsedGameTime.TotalSeconds);
+            }
+
+            for (int i = 0; i < documents.Count; i++)
+            {
+                documents[i].Draw(_spriteBatch);
             }
 
 
@@ -216,6 +249,54 @@ namespace AgeOfWar
         {
             walls.Add(new Wall(Content.Load<Texture2D>("testTxr"), 0, 0, 2000));
             walls.Add(new Wall(Content.Load<Texture2D>("testTxr"), 2000, 0, 2000));
+        }
+
+        void hitPlayer()
+        {
+            for(int i = 0; i < badGuys.Count; i++)
+            {
+                if(badGuys[i].badRect.Intersects(player.rightRect) && !player.hit && player.health >0)
+                {
+                    player.hit = true;
+                    health.RemoveAt(player.health-1);
+                    player.health--;
+                    player.playerVel.X -= 10;
+                }
+                if (badGuys[i].badRect.Intersects(player.leftRect) && !player.hit && player.health > 0)
+                {
+                    player.hit = true;
+                    health.RemoveAt(player.health- 1);
+                    player.health--;
+                    player.playerVel.X += 10;
+                }
+                if (badGuys[i].badRect.Intersects(player.feetRect) && player.health > 0)
+                {
+                    player.playerVel.Y -= 5;
+                }
+                if(badGuys[i].badRect.Intersects(player.attackRect) && player.playerHit)
+                {
+                    badGuys.RemoveAt(i);
+                }
+            }
+        }
+
+        void docLev1()
+        {
+            documents.Add(new Document(Content.Load<Texture2D>("file"), 350, 340,1));
+            documents.Add(new Document(Content.Load<Texture2D>("file"), 1050, 40,2));
+            documents.Add(new Document(Content.Load<Texture2D>("file"), 1650, 640,3));
+        }
+
+        void docCollision()
+        {
+            for (int i = 0; i < documents.Count; i++)
+            {
+                if (player.playerRect.Intersects(documents[i].docRect))
+                {
+                    documents[i].found = true;
+                }
+            }
+            
         }
 
     }

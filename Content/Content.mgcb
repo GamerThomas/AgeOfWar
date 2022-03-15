@@ -37,7 +37,7 @@
 /processorParam:TextureFormat=Color
 /build:CharSheet.png
 
-#begin CharSheet1.png
+#begin file.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -47,7 +47,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:CharSheet1.png
+/build:file.png
 
 #begin Heart.png
 /importer:TextureImporter
