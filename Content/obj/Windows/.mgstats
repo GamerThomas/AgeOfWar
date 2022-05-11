@@ -1,8 +1,13 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/CharLev1.png","C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/bin/Windows/CharLev1.xnb","TextureProcessor","Texture2DContent",14883,332885,0.2447036
-"C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/CharSheet.png","C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/bin/Windows/CharSheet.xnb","TextureProcessor","Texture2DContent",1066,60085,0.0052554
-"C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/file.png","C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/bin/Windows/file.xnb","TextureProcessor","Texture2DContent",1474,10085,0.1037587
-"C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/Heart.png","C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/bin/Windows/Heart.xnb","TextureProcessor","Texture2DContent",297,4181,0.0050054
-"C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/Lev1Walk.png","C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/bin/Windows/Lev1Walk.xnb","TextureProcessor","Texture2DContent",4482,83285,0.0073608
-"C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/logPlat.png","C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/bin/Windows/logPlat.xnb","TextureProcessor","Texture2DContent",470,6085,0.0040008
-"C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/testTxr.png","C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/bin/Windows/testTxr.xnb","TextureProcessor","Texture2DContent",194,10085,0.0046251
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/background1.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/background1.xnb","TextureProcessor","Texture2DContent",15270,746581,0.1371629
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/CharLev1.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/CharLev1.xnb","TextureProcessor","Texture2DContent",14883,332885,0.0094405
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/CharSheet.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/CharSheet.xnb","TextureProcessor","Texture2DContent",1066,60085,0.0042142
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/dead.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/dead.xnb","TextureProcessor","Texture2DContent",2193,45685,0.0034233
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/file.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/file.xnb","TextureProcessor","Texture2DContent",1474,10085,0.0020992
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/frenchBadGuy.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/frenchBadGuy.xnb","TextureProcessor","Texture2DContent",7046,216085,0.0083543
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/healthPack.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/healthPack.xnb","TextureProcessor","Texture2DContent",1461,10085,0.0015335
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/Heart.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/Heart.xnb","TextureProcessor","Texture2DContent",297,4181,0.0013256
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/jacobiteBoss-1.png.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/jacobiteBoss-1.png.xnb","TextureProcessor","Texture2DContent",1875,18741,0.001711
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/Lev1Walk.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/Lev1Walk.xnb","TextureProcessor","Texture2DContent",4482,83285,0.0026475
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/logPlat.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/logPlat.xnb","TextureProcessor","Texture2DContent",470,6085,0.0013251
+"C:/Users/LewisTom/Desktop/AgeOfWar/Content/testTxr.png","C:/Users/LewisTom/Desktop/AgeOfWar/Content/bin/Windows/testTxr.xnb","TextureProcessor","Texture2DContent",194,10085,0.0021984

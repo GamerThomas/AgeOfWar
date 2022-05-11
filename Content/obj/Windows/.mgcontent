@@ -4,15 +4,25 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/CharLev1.png</File>
-    <File>C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/CharSheet.png</File>
-    <File>C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/file.png</File>
-    <File>C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/Heart.png</File>
-    <File>C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/Lev1Walk.png</File>
-    <File>C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/logPlat.png</File>
-    <File>C:/Users/LewisTom/Desktop/AgeOfWar-main100322/AgeOfWar-main/Content/testTxr.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/background1.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/CharLev1.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/CharSheet.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/dead.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/file.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/frenchBadGuy.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/healthPack.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/Heart.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/jacobiteBoss-1.png.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/Lev1Walk.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/logPlat.png</File>
+    <File>C:/Users/LewisTom/Desktop/AgeOfWar/Content/testTxr.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

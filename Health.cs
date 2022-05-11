@@ -16,28 +16,25 @@ namespace AgeOfWar
         {
             healthArt = art;
       
-            hpRect = new Rectangle(x, y, 32, 32);
+            hpRect = new Rectangle(x, -340, 32, 32);
         }
 
         public void update(Rectangle playerRect , int num)
         {
             if(num == 0)
             {
-                hpRect.X = playerRect.X - 150;
-                hpRect.Y = playerRect.Y -300;
+                hpRect.X = playerRect.X - 800;
             }
 
             if (num == 1)
             {
-                hpRect.X = playerRect.X - 115;
-                hpRect.Y = playerRect.Y - 300;
+                hpRect.X = playerRect.X - 770;
             }
 
 
             if (num == 2)
             {
-                hpRect.X = playerRect.X -80;
-                hpRect.Y = playerRect.Y - 300;
+                hpRect.X = playerRect.X -740;
             }
 
 

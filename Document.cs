@@ -24,27 +24,24 @@ namespace AgeOfWar
 
             docNum = num;
 
-            hudRect = new Rectangle(0, 0, 50, 50);
+            hudRect = new Rectangle(0, -340, 50, 50);
         }
 
         public void Update(Rectangle playerRect)
         {
             if(docNum ==1)
             {
-                hudRect.X = playerRect.X + 1700;
-                hudRect.Y = playerRect.Y - 300;
+                hudRect.X = playerRect.X + 900;
             }
 
             if(docNum == 2)
             {
-                hudRect.X = playerRect.X + 1640;
-                hudRect.Y = playerRect.Y - 300;
+                hudRect.X = playerRect.X + 950;
             }
 
             if(docNum == 3)
             {
-                hudRect.X = playerRect.X + 1580;
-                hudRect.Y = playerRect.Y - 300;
+                hudRect.X = playerRect.X + 1000;
             }
         }
         public void Draw(SpriteBatch sb)

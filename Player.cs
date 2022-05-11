@@ -100,7 +100,7 @@ namespace AgeOfWar
                 m_currentState = AnimState.Falling;
             }
 
-            if (keyB.IsKeyDown(Keys.Space) && !jumping)
+            if (keyB.IsKeyDown(Keys.Space) && !jumping && attackDone)
             {
                 jumping = true;
                 playerVel.Y -= 10;
@@ -280,11 +280,11 @@ namespace AgeOfWar
 
 
 
-            sb.Draw(testArt, attackRect, Color.Red);
-            sb.Draw(testArt, feetRect, Color.Yellow);
-            sb.Draw(testArt, HeadRect, Color.Blue);
-            sb.Draw(testArt, leftRect, Color.Orange);
-            sb.Draw(testArt, rightRect, Color.Green);
+            //sb.Draw(testArt, attackRect, Color.Red);
+            //sb.Draw(testArt, feetRect, Color.Yellow);
+            //sb.Draw(testArt, HeadRect, Color.Blue);
+            //sb.Draw(testArt, leftRect, Color.Orange);
+            //sb.Draw(testArt, rightRect, Color.Green);
         }
     }
 
